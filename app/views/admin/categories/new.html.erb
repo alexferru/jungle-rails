@@ -1,0 +1,42 @@
+<section class="admin-products-new">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="card shadow-lg">
+          <div class="card-header ">
+            <h4 class="mb-0">New Category</h4>
+          </div>
+          <div class="card-body">
+            <%= form_for [:admin, @category], class: 'row g-3' do |form| %>
+              <% if form.object.errors.any? %>
+                <div class="alert alert-danger">
+                  <h5 class="alert-heading mb-3">Oops!</h5>
+                  <p><strong>The following errors prevented saving:</strong></p>
+                  <ul class="mb-0">
+                    <% form.object.errors.full_messages.each do |error| %>
+                      <li><%= error %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              <% end %>
+
+              <div class="col-md-10">
+                <div class="form mb-3">
+                 
+                  <%= form.text_field :name, class: 'form-control', placeholder: 'Enter category name', required: true, value: form.object.name %>
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <%= form.submit 'Create Category', class: 'btn btn-success w-100' %>
+              </div>
+            <% end %>
+          </div>
+          <div class="card-footer">
+            <%= link_to 'Cancel', [:admin, :categories], class: 'btn btn-outline-secondary' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
