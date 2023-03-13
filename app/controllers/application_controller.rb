@@ -39,6 +39,9 @@ class ApplicationController < ActionController::Base
     cookies[:cart]
   end
 
-
+  def current_sale
+    @current_sale = Sale.where("starts_on <= ? AND ends_on >= ?", Date.current, Date.current).first
+  end
+  helper_method :current_sale
   
 end

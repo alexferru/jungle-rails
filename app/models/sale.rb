@@ -1,6 +1,6 @@
 class Sale < ApplicationRecord
   def self.active
-    where("sales.start_date <= ? AND sales.end_date >= ?", Date.current, Date.current)
+    where("sales.starts_on <= ? AND sales.ends_on >= ?", Date.current, Date.current)
   end
 
   def finished?
