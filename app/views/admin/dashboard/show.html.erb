@@ -1,2 +1,61 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<section class="admin-dashboard-show">
+  <header class="page-header">
+    <h1>Admin &raquo; Dashboard</h1>
+  </header>
+  <div class="admin-summary">
+    <div class="dashboard-card">
+      <a href="/admin/products" class="card-link">
+        <div class="card-content">
+          <h2 class="card-title">Products</h2>
+          <span class="card-count"><%= @product_count %></span>
+        </div>
+      </a>
+    </div>
+    <div class="dashboard-card">
+      <a href="/admin/categories" class="card-link">
+        <div class="card-content">
+          <h2 class="card-title">Categories</h2>
+          <span class="card-count"><%= @category_count %></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .dashboard-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 250px;
+  }
+
+  .card-link {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .card-content {
+    text-align: center;
+  }
+
+  .card-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+  }
+
+  .card-count {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    color: #3498db;
+  }
+</style>

@@ -57,11 +57,18 @@
           <ul class="dropdown-menu dropdown-menu-dark">
             <li><%= link_to 'Dashboard', [:admin, :root], class: "nav-link" %></li>
             <li><%= link_to 'Products', [:admin, :products], class: "nav-link" %></li>
+            <li><%= link_to 'Categories', [:admin, :categories], class: "nav-link" %></li>
+            <li><%= link_to 'Sales', [:admin, :sales], class: "nav-link" %></li>
           </ul>
         </li>
         <li class="nav-item end-0">
           <%= link_to cart_path, class: "nav-link " do %> <%= fa_icon "shopping-cart" %>
           My Cart (<%= cart.size %>) <% end %>
+          <% if current_user %>
+            Hello, <%= current_user.name %>! | <%= link_to "Logout", '/logout' %>
+          <% else %>
+            <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+          <% end %>
         </li>
       </ul>
     </div>
