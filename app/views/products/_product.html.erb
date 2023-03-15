@@ -1,7 +1,7 @@
 <article>
   <%= link_to product_path(product) do %>
     <%= image_tag product.image.thumb.url , alt: product.name %>
-    <h1>
+    <h1 class="product-name">
       <span><%= product.name %></span>
       <span><%= humanized_money_with_symbol product.price %></span>
     </h1>
