@@ -1,10 +1,11 @@
-Cypress.Commands.add("createUser", (name, email, password) => {
+Cypress.Commands.add("createUser", (name, last_name, email, password) => {
   cy.request({
     method: "POST",
     url: "/users",
     body: {
       user: {
         name: name,
+        last_name: last_name,
         email: email,
         password: password,
         password_confirmation: password,
@@ -19,11 +20,12 @@ describe("login and logout", () => {
   });
 
   const userName = "Alex";
+  const userLastName = "Ferru";
   const userEmail = "alex123@example.com";
   const userPassword = "password123";
 
   it("logs in with valid credentials", () => {
-    cy.createUser(userName, userEmail, userPassword);
+    cy.createUser(userName, userLastName, userEmail, userPassword);
 
     cy.get("input[name='email']").type(userEmail);
     cy.get("input[name='password']").type(userPassword);
@@ -33,7 +35,7 @@ describe("login and logout", () => {
   });
 
   it("fails to log in with invalid credentials", () => {
-    cy.createUser(userName, userEmail, userPassword);
+    cy.createUser(userName, userLastName, userEmail, userPassword);
 
     cy.get("input[name='email']").type(userEmail);
     cy.get("input[name='password']").type("wrongpassword");
@@ -43,7 +45,7 @@ describe("login and logout", () => {
   });
 
   it("logs out", () => {
-    cy.createUser(userName, userEmail, userPassword);
+    cy.createUser(userName, userLastName, userEmail, userPassword);
 
     // log in
     cy.get("input[name='email']").type(userEmail);
