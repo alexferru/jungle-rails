@@ -112,14 +112,27 @@ form.button_to {
   color: #f38792 !important;
 }
 
+.navbar-custom {
+  padding: 0.5rem 1rem;
+}
+
+.nav-link-custom {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
 .login-link,
 .signup-link,
 .logout-link {
   font-family: "Montserrat";
   font-weight: 700;
+  font-size: 1em;
   color: white;
   background-color: rgba(0, 130, 29, 0.7);
-  padding: 0.25em 0.5em;
+  padding: 0.35em 0.7em;
   border-radius: 0.25em;
   margin-left: 0.5em;
   text-decoration: none;
@@ -128,5 +141,29 @@ form.button_to {
     background-color: rgba(0, 130, 29, 0.9);
     color: white;
     text-decoration: none;
+  }
+}
+
+.navbar-text {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5em;
+  font-weight: 700; // Increase font-weight
+  font-size: 1em; // Increase font-size
+}
+
+@media (max-width: 991.98px) {
+  .navbar-custom {
+    padding: 0.25rem 1rem;
+  }
+
+  .nav-link-custom {
+    padding: 0.25rem 1rem;
+  }
+
+  .login-link,
+  .signup-link,
+  .logout-link {
+    margin-left: 0;
   }
 }

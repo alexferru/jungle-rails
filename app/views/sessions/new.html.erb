@@ -1,10 +1,22 @@
+<section class="login-section">
+  <header class="page-header">
+    <h1>Login</h1>
+  </header>
 
-<h1>Login</h1>
-
-<%= form_tag '/login' do %>
-
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
-<% end %>
+  <div class="form-container">
+    <%= form_tag '/login' do %>
+      <div class="form-group">
+        <%= label_tag :email, 'Email:' %>
+        <%= text_field_tag :email, nil, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= label_tag :password, 'Password:' %>
+        <%= password_field_tag :password, nil, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= submit_tag "Submit", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</section>
 
