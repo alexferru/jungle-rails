@@ -1,12 +1,49 @@
 .cart-show {
-  tr div {
-    width: max-content;
+  padding: 1em;
+
+  .page-header {
+    margin-bottom: 1em;
+    h1 {
+      font-family: "Montserrat";
+      font-weight: 700;
+      color: rgba(0, 130, 29, 0.7);
+      border-bottom: 0.1em solid rgba(0, 130, 29, 0.3);
+    }
   }
 
-  button.stripe-button-el span {
+  .order-summary {
+    background-color: white;
     border-radius: 0.25em;
-    border: 0.1em solid rgba(0, 130, 29, 0.8);
-    background: rgba(0, 130, 29, 0.7);
+    border: 0.1em solid rgba(0, 130, 29, 0.3);
+    box-shadow: rgba(0, 130, 29, 0.16) 0px 3px 6px,
+      rgba(0, 130, 29, 0.23) 0px 3px 6px;
+    padding: 1em;
+
+    h4 {
+      font-family: "Montserrat";
+      font-weight: 700;
+      color: rgba(0, 130, 29, 0.7);
+      margin-bottom: 1em;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    table {
+      margin-bottom: 1em;
+    }
+  }
+
+  .btn-primary {
+    background-color: rgba(0, 130, 29, 0.7);
     color: white;
+    margin-top: 1em;
+    border: none;
+    font-family: "Montserrat";
+    font-weight: 700;
+    &:hover {
+      background-color: rgba(0, 130, 29, 0.9);
+    }
   }
 }
