@@ -1,5 +1,5 @@
 class Admin::SalesController < ApplicationController
-  # http_basic_authenticate_with name: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD']
+  http_basic_authenticate_with name: ENV["HTTP_BASIC_USER"], password: ENV["HTTP_BASIC_PASSWORD"]
 
   def index
     @sales = Sale.all
@@ -9,12 +9,12 @@ class Admin::SalesController < ApplicationController
     @sale = Sale.new
   end
 
-  def created
+  def create
     @sale = Sale.new(sale_params)
-    if @sale.valid?
-      redirect_to admin_sales, notice: 'You added a new promotion!'
+    if @sale.save
+      redirect_to admin_sales_path, notice: 'You added a new promotion!'
     else
-      redirect_to new_admin_sale
+      render :new
     end
   end
 
@@ -26,6 +26,7 @@ class Admin::SalesController < ApplicationController
 
   private
     def sale_params
-      params.require(:sale).permit(:name, :start_date, :end_date, :percent_off)
+      params.require(:sale).permit(:name, :starts_on, :ends_on, :percent_off)
     end
 end
+

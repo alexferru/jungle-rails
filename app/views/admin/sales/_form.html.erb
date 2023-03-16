@@ -1,0 +1,36 @@
+<%= form_with(model: [:admin, @sale], local: true) do |form| %>
+  <% if @sale.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sale.errors.count, "error") %> prohibited this sale from being saved:</h2>
+      <ul>
+        <% @sale.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :starts_on %>
+    <%= form.date_field :starts_on %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ends_on %>
+    <%= form.date_field :ends_on %>
+  </div>
+
+  <div class="field">
+    <%= form.label :percent_off %>
+    <%= form.number_field :percent_off %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

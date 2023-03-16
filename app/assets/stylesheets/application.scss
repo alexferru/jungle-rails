@@ -111,3 +111,22 @@ form.button_to {
 .text-danger {
   color: #f38792 !important;
 }
+
+.login-link,
+.signup-link,
+.logout-link {
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: white;
+  background-color: rgba(0, 130, 29, 0.7);
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  margin-left: 0.5em;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgba(0, 130, 29, 0.9);
+    color: white;
+    text-decoration: none;
+  }
+}

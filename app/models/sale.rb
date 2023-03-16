@@ -4,11 +4,11 @@ class Sale < ApplicationRecord
   end
 
   def finished?
-    ends_on < Date.current
+    ends_on && ends_on < Date.current
   end
 
   def upcoming?
-    starts_on > Date.current
+    starts_on && starts_on > Date.current
   end
 
   def active?
