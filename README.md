@@ -16,25 +16,30 @@ Jungle is a Ruby on Rails e-commerce web application that allows users to browse
 
 ### Home Page
 
-![Jungle - Home]()
+![Jungle - Home](https://github.com/JimHwkins/jungle-rails/blob/master/docs/Home.jpeg)
+![Jungle - Home Products](https://github.com/JimHwkins/jungle-rails/blob/master/docs/Home-products.png)
 
 ### Login & Sign Up Page
 
-![Jungle - Login]()
-![Jungle - Sign Up]()
+![Jungle - Login](https://github.com/JimHwkins/jungle-rails/blob/master/docs/login.png)
+![Jungle - Sign Up](https://github.com/JimHwkins/jungle-rails/blob/master/docs/signup.png)
+
+### Product Detail Page
+
+![Jungle - Product Detail](https://github.com/JimHwkins/jungle-rails/blob/master/docs/product.png)
 
 ### Cart Page
 
-![Jungle - Cart]()
+![Jungle - Cart](https://github.com/JimHwkins/jungle-rails/blob/master/docs/cart.png)
 
 ### Order Page
 
-![Jungle - Order]()
+![Jungle - Order](https://github.com/JimHwkins/jungle-rails/blob/master/docs/order.png)
 
 ### Admin Views
 
-![Jungle - Admin Dashboard]()
-![Jungle - Admin Sales]()
+![Jungle - Admin Dashboard](https://github.com/JimHwkins/jungle-rails/blob/master/docs/admin-dashboard.png)
+![Jungle - Admin Sales](https://github.com/JimHwkins/jungle-rails/blob/master/docs/admin-sales.png)
 
 ## Setup
 
